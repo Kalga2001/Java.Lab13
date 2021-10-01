@@ -1,0 +1,55 @@
+Public Pair:
+package com.company;
+import java.util.Scanner;
+import java.lang.String;
+import java.util.*;
+import java.lang.Exception;
+
+public class Pair <F, S> {
+    private F First;
+    private S Second;
+
+    public Pair(F First, S Second)
+    {
+        this.First = First;
+        this.Second = Second;
+    }
+    public void setFirst(F First){
+        this.First = First;
+    }
+    public F getFirst(){
+        return First;
+    }
+    public void setSecond(S Second){
+        this.Second = Second;
+    }
+    public S getSecond(){
+        return Second;
+    }
+}
+
+Class Main:
+package com.company;
+import java.util.Scanner;
+import java.lang.String;
+import java.util.*;
+import java.lang.Exception;
+
+
+ class Main {
+     public static void main(String[] args) {
+
+         Pair<Integer,String> p1 = new Pair<Integer,String>(10,"String");
+         p1.setFirst(1);
+         p1.setSecond("String");
+
+         if (p1.getFirst() !=1 || !p1.getSecond().equals("String")){
+             System.out.println("Error");
+         }
+         else {
+             System.out.println("First: " + p1.getFirst());
+             System.out.println("Second: " + p1.getSecond());
+         }
+         System.out.println();
+     }
+
